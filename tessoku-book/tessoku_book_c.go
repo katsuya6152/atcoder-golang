@@ -5,17 +5,33 @@ import (
 )
 
 func main() {
+	var n, k int
+	result := "No"
+	fmt.Scan(&n, &k)
 
-	// TODO edit this code, this code is for https://atcoder.jp/contests/practice/tasks/practice_1
+	p := make([]int, n)
+	q := make([]int, n)
 
-	// param
-	var a int
-	var b, c int
-	var s string
-	fmt.Scanf("%d\n", &a)
-	fmt.Scanf("%d %d\n", &b, &c)
-	fmt.Scanf("%s\n", &s)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&p[i])
+	}
 
-	// answer
-	fmt.Printf("%d %s\n", a+b+c, s)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&q[i])
+	}
+
+	for i := 0; i < n; i++ {
+		p_v := p[i]
+		for j := 0; j < n; j++ {
+			q_v := q[j]
+			if k == (p_v + q_v) {
+				result = "Yes"
+				break
+			}
+		}
+		if result == "Yes" {
+			break
+		}
+	}
+	fmt.Print(result)
 }

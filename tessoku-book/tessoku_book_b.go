@@ -5,17 +5,17 @@ import (
 )
 
 func main() {
-
-	// TODO edit this code, this code is for https://atcoder.jp/contests/practice/tasks/practice_1
-
-	// param
+	var n, x int
 	var a int
-	var b, c int
-	var s string
-	fmt.Scanf("%d\n", &a)
-	fmt.Scanf("%d %d\n", &b, &c)
-	fmt.Scanf("%s\n", &s)
+	result := "No"
 
-	// answer
-	fmt.Printf("%d %s\n", a+b+c, s)
+	fmt.Scan(&n, &x)
+	for i:=0; i<n; i++ {
+		fmt.Scan(&a)
+		if a == x {
+			result = "Yes"
+		}
+	}
+
+	fmt.Print(result)
 }
